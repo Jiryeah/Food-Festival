@@ -167,14 +167,14 @@
     </footer>
 </body>
 <script> 
-(function() {
-  if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service-worker.js')
-      .then(() => console.log('Service Worker registered successfully.'))
-      .catch(error => console.log('Service Worker registration failed:', error));
-  }
-})(); /*'()+();': is an immediately invoked function expression (I.I.F.E). The parenthesis around the entire 
+  (function() {
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(() => console.log('Service Worker registered successfully.'))
+        .catch(error => console.log('Service Worker registration failed:', error));
+    }
+  })(); /*'()+();': is an immediately invoked function expression (I.I.F.E). The parenthesis around the entire 
       function, lets the JS know that it will process the function as a function expression. The '();' will 
       immediately execute the function. NOT PART OF THE GLOBAL SPACE */
-</script>
+  </script>
 </html>
